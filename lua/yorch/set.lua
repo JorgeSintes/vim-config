@@ -29,3 +29,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+
+-- Github copilot stuff
+vim.g.copilot_no_tab_map = true
+

@@ -36,3 +36,10 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 
+-- Github copilot stuff
+vim.keymap.set('i', '<C-k>', '<Plug>(copilot-suggest)')
+vim.keymap.set('i', '<C-l>', '<Plug>(copilot-next)')
+vim.keymap.set('i', '<C-j>', '<Plug>(copilot-previous)')
+
+vim.api.nvim_set_keymap("i", "<C-y>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
