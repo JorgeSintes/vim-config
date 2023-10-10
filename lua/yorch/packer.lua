@@ -5,7 +5,10 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  use {
+      'wbthomason/packer.nvim',
+      lazy = false
+  }
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
 	  -- or                            , branch = '0.1.x',
@@ -13,7 +16,7 @@ return require('packer').startup(function(use)
   }
   use { "catppuccin/nvim", as = "catppuccin" }
 
-  use { 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} }
+  use {'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}}
   use "mbbill/undotree"
 
   use {
@@ -32,6 +35,8 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 	  }
   }
+    use 'christoomey/vim-tmux-navigator'
+    use 'tpope/vim-commentary'
 
 end)
 
